@@ -42,5 +42,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }, 50); // Adjust typing speed here (milliseconds)
     }
-  });ok
+  });
   
