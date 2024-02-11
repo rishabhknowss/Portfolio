@@ -9,7 +9,7 @@ export const About = ()=> {
     useEffect(() => {
         const intervalId = setInterval(() => {
         setTechIndex((prevIndex) => (prevIndex + 1) % techList.length);
-        }, 2000);
+        }, 1000);
 
         return () => clearInterval(intervalId);
     }, []);
