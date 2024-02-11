@@ -4,7 +4,7 @@ export const Hackathons = () => {
   return (
     <>
       <Navbar />
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center ml-4 md:ml-0">
         <div className="grid grid-cols-1 mt-5">
         <div className="text-4xl font-bold">HACKATHONS</div>
         <div className="mt-5 font-bold text-2xl">2024</div>
