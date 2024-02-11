@@ -1,30 +1,23 @@
-import { useState, useEffect } from 'react';
+import { BrowserRouter, Routes , Route} from 'react-router-dom';
 import './App.css';
 import { About } from './components/About';
-import { Navbar } from './components/Navbar';
+import { Hackathons } from './components/Hackathons';
+import { Project } from './components/Project';
 
-const techList = ["Web3", "AI", "Real-Time"];
-
-function App() {
-  const [techIndex, setTechIndex] = useState(0);
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setTechIndex((prevIndex) => (prevIndex + 1) % techList.length);
-    }, 2000);
-
-    return () => clearInterval(intervalId);
-  }, []);
-
-  const currentTech = techList[techIndex];
+function App(){
 
   return (
-
-  <>
-  <Navbar></Navbar>
-  <About tech={currentTech} />;
-  </>
+    <>
+    <BrowserRouter>
+    <Routes>
+    <Route path='/' element = {<About></About>} />
+    <Route path='/hackathons' element = {<Hackathons></Hackathons>} />
+    <Route path='/projects' element={<Project></Project>} />
+    </Routes>
+    </BrowserRouter>
+    </>
   )
 }
+
 
 export default App;
