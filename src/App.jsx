@@ -1,3 +1,4 @@
+import { inject } from '@vercel/analytics';
 import { BrowserRouter, Routes , Route} from 'react-router-dom';
 import './App.css';
 import { About } from './components/About';
@@ -19,5 +20,6 @@ function App(){
   )
 }
 
-
+ 
+inject();
 export default App;
